@@ -1,6 +1,5 @@
 import psycopg2
 import config
-import pandas as pd
 import json
 import os
 import re

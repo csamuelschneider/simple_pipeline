@@ -1,0 +1,5 @@
+db_host = "host.docker.internal" 
+db_user = "postgres" 
+db_password = "root" 
+db_port = "5432" 
+db_name = "postgres" 

@@ -1,7 +1,5 @@
-from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, Float, TIMESTAMP, text, insert, select, cast, func
-from sqlalchemy.dialects.postgresql import JSON
+from sqlalchemy import create_engine, MetaData, text
 from config import db_host, db_user, db_password, db_port, db_name
-import json
 
 engine = create_engine(f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}', echo=True)
 metadata = MetaData()

@@ -2,7 +2,8 @@ from sqlalchemy import create_engine, MetaData, text
 from config import db_host, db_user, db_password, db_port, db_name
 
 engine = create_engine(f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}', echo=True)
-metadata = MetaData()
+
+metadata = MetaData() #this code creates a metadata object to hold the schema of the database
 
 with engine.connect() as connection:
     delta_ini = connection.execute(text("SELECT COALESCE(max(batch_id), 0) FROM trusted_sales")).scalar()
